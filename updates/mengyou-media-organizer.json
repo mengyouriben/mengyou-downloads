@@ -1,0 +1,19 @@
+{
+  "product": "mengyou-media-organizer",
+  "product_name": "梦游｜媒体整理",
+  "version": "0.2.0",
+  "release_date": "2026-09-21",
+  "public_key_fingerprint": "5261889e734eed1d",
+  "homepage": "https://mengyouriben.com/downloads/",
+  "notes": "新增影视整理；修好了手机识别；补齐发布规范要求的界面入口。\n\n### 新增\n\n- **影视整理**：扫描影视根目录（默认 `F:\\更新整理连续剧`），联网识别每一部作品后\n  - 电视剧 / 动漫按 `[类型][片名][语言][年代][第x季]` 重命名文件夹，季标签只在名字里明确写了第几季时出现；\n  - 节目按 `[类型][节目名][语言]` 重命名；\n  - 电影不单独建文件夹，全部集中到一个电影目录，文件改成 `[类型][片名][语言][年代][上集/下集]`；\n  - 每一部都下载高清海报和简介，两者的文件名就是**片名本身**（不带方括号）。\n- **元数据来源**：Bangumi 公开 API（无需 key，日剧与动画覆盖最好）+ 维基百科简介兜底；\n  在设置里填入免费的 TMDB API key 后，欧美与华语作品的识别率会明显提高。查不到就如实留空，不编造。\n- **识别安全线**：识别不到、置信度低于阈值、目录里有多部作品、或根本不是影视的目录（软件、教材、网盘目录），\n  一律不勾选也不改名；每一行都能双击输入准确片名重新识别。\n- **标题栏「更新说明」按钮**与**左下角「梦游日本」发布页入口**，符合桌面软件发布规范。\n\n### 变更\n\n- **手机默认改为移动**：导入成功后从手机删除源文件（此前默认是复制，与要求不符）。\n  移动模式下遇到\"疑似已导入\"的文件时，仍然会把它取回来用 SHA-256 复核，确认重复才丢弃暂存副本，\n  不会在目标目录留下第二份，也不会把没核对过的文件从手机上删掉。\n\n### 修复\n\n- **手机识别不到**：设备过滤把手机一起滤掉了。手机在资源管理器里的路径是 `::{20D04FE0-…}`，\n  第二个字符也是冒号，旧逻辑只判断第二个字符就把它当成盘符跳过了。现在要求首字符是盘符字母，\n  已用真机（Xiaomi 18 Fold）验证 DCIM / Movies / Pictures / Download 均可枚举。",
+  "payload": {
+    "type": "client_installer",
+    "url": "https://raw.githubusercontent.com/mengyouriben/mengyou-downloads/main/releases/mengyou-media-organizer/0.2.0/%E6%A2%A6%E6%B8%B8%E5%AA%92%E4%BD%93%E6%95%B4%E7%90%86-0.2.0-setup.exe",
+    "sha256": "41da28e424c4d6f3f5fd04aa1e9f1ef1456370bee14f2595025cf934855716c7",
+    "size": 37366889
+  },
+  "signature": {
+    "alg": "ed25519",
+    "value": "Vw6Pc8znhoD8Zvl7PKOeRf3p86YWouFZD7/ZvbmhgpuztsLG4bvBqxDUCo7lC5FRt+6od8raktgxhjIRh9LSCA=="
+  }
+}

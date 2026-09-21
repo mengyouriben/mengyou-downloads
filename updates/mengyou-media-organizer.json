@@ -1,19 +1,19 @@
 {
   "product": "mengyou-media-organizer",
   "product_name": "梦游｜媒体整理",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "release_date": "2026-09-21",
   "public_key_fingerprint": "5261889e734eed1d",
   "homepage": "https://mengyouriben.com/downloads/",
-  "notes": "新增「自定义」整理页：目录、文件类型、规则全部自己定。\n\n### 新增\n\n- **自定义整理页**（左侧导航「自定义」）。三步：选一个文件夹（可选是否包含子文件夹）→\n  勾要扫的文件类型（照片 / 视频 / 音乐 / 文档，可多选）→ 选一条规则。**一律是移动，不复制。**\n- **规则一 · 提取并重命名**：不分类，把扫到的文件全部搬进目的文件夹，改名成\n  `序号-日期-原文件名`，例如 `00-20060505-DSC01234.jpg`。\n  序号按**来源文件夹**编：同一个文件夹里的文件共用一个序号，换一个文件夹序号加一，从 `00` 起，\n  根目录固定是 `00`。日期取文件自己的拍摄/录制日期（EXIF、MP4 mvhd 等），读不到就写 `未知日期`，\n  不拿修改时间冒充。\n- **规则二 · 整个文件夹移动**：把「含有勾选类型文件」的那些文件夹整个搬进目的文件夹，\n  文件名一个都不改；文件夹里没勾选的类型跟着一起走。嵌套目录只登记最外层，不会搬两次。\n- **规则三 · 只重命名不移动**：就地按规则一的命名方式改名，不搬家。\n  这条不会清理空文件夹——文件没动，用户本来就有的空目录不该被顺手删掉。\n- 页面记住上次选的目录、类型和规则，下次打开直接接着用。\n\n### 细节\n\n- 重复运行不会把前缀叠起来：认得自己上次生成的 `序号-日期-` 前缀，先剥掉再重算，\n  `01-2020-01-2020-b.jpg` 这种叠加在测试里被钉死了。\n- 同名冲突仍然只由 `conflict.resolve()` 裁决，与其它整理方式完全一致。\n- 序号超过 99 自然进位成三位，不会互相覆盖。",
+  "notes": "修一个真实卡住的在线更新：0.2.1 点「检查更新」只得到 404。\n\n### 修复\n\n- **更新地址被用户设置永久盖住**。更新地址一旦写进 `%APPDATA%` 的设置里，就会盖住随程序\n  分发的那个。发布路线从站内路径换到 GitHub 之后，老安装全部指向一个已经下线的地址，\n  而唯一能修好它的办法恰恰是更新本身——死循环。两层一起修：\n  - `Settings` 加载时把已下线的地址迁回内置地址（`RETIRED_FEED_PREFIXES`）；\n  - `updater.check()` 在设置里的地址取不到时，**回落到程序内置的地址**再试一次。\n  回落不放宽任何安全条件：两个地址照样都要 HTTPS、产品标识一致、Ed25519 验签通过。\n- 发布脚本强制 UTF-8 输出。控制台是 GBK 时，打印 `✓` 会抛 `UnicodeEncodeError`，\n  而且正好炸在「制品已上传、回读已通过、指针还没切」的半路上。\n\n### 说明\n\n之前记录的「0.2.0 客户端发现 0.2.1」那次升级验证，走的是代码里内置的地址，\n**没有覆盖真实安装会读的用户设置**，所以没能发现这个问题。\n`tests/test_update_feed.py`（10 项）现在把两层都钉死了。",
   "payload": {
     "type": "client_installer",
-    "url": "https://raw.githubusercontent.com/mengyouriben/mengyou-downloads/main/releases/mengyou-media-organizer/0.3.0/%E6%A2%A6%E6%B8%B8%E5%AA%92%E4%BD%93%E6%95%B4%E7%90%86-0.3.0-setup.exe",
-    "sha256": "5966287de6343414f086e9605dc8329566754bb3b8f0370bf82bcce77053b287",
-    "size": 38207510
+    "url": "https://raw.githubusercontent.com/mengyouriben/mengyou-downloads/main/releases/mengyou-media-organizer/0.3.1/%E6%A2%A6%E6%B8%B8%E5%AA%92%E4%BD%93%E6%95%B4%E7%90%86-0.3.1-setup.exe",
+    "sha256": "3fb6925fc99afd9d6140056a27b75f8aa8338c736d26a6020b73c846cc003d98",
+    "size": 38208063
   },
   "signature": {
     "alg": "ed25519",
-    "value": "0sdBvugjDzHONGVkgQzQ0OZcX2u9/gLYacsPWhv1T1MaVtn6jUNVRhHiESQFV9kQZIZWnGWQ6giyB6HxiAUQCQ=="
+    "value": "jlWmoaeevYEhvDICagh4OB9rDbB2Fxi3Mv0CS6pvGmyicBlwMI4AiVfEqlX/uP46tYtl1meuhtwZJGO3axN5Dw=="
   }
 }

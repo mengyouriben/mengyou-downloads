@@ -1,0 +1,19 @@
+{
+  "product": "mengyou-music-player",
+  "product_name": "梦游｜音乐播放器",
+  "version": "0.1.101",
+  "release_date": "2026-09-28",
+  "public_key_fingerprint": "66b20971f02419b0",
+  "homepage": "https://mengyouriben.com/downloads/",
+  "notes": "- 产品正式更名为「梦游｜音乐播放器」：窗口标题、顶部标识、关于页、安装包、开始菜单与桌面快捷方式统一使用新名称，版本统一显示为 v0.1.101。\n- 一次性身份迁移：保持同一 AppId 与用户数据目录；安装包升级时会移除旧名称“梦游音乐播放器”的快捷方式和旧中文名启动副本，只保留一套「梦游｜音乐播放器」入口。\n- 内置网易云音乐来源接入真实直链解析（320k 优先）；酷狗来源接入 getSongInfo 真实直链解析，搜索结果可在应用内直接交给下载引擎。\n- 新增网易云音乐外挂引擎模板：默认禁用，放入配置文件后启用；也可对接自行部署的解析服务。\n- 设置 → 搜索来源新增“网易云外挂引擎”图形化配置入口，保存后重启播放器生效。",
+  "payload": {
+    "type": "client_installer",
+    "url": "https://download.mengyouriben.com/releases/mengyou-music-player/0.1.101/%E6%A2%A6%E6%B8%B8%EF%BD%9C%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8-0.1.101-setup.exe",
+    "sha256": "e2d12eea370c0b152c6b078b3ed38bd94915afd7c6acbf31b6d738189d16e46e",
+    "size": 152326342
+  },
+  "signature": {
+    "alg": "ed25519",
+    "value": "MTJ0nmugg53YygDp4y3a8nOPPPXcD6q6tRVZMTWV/j0rXOJMsFqrzL1zcqbFFS8vSuO4kLYbKOPa6HC389ZgDw=="
+  }
+}

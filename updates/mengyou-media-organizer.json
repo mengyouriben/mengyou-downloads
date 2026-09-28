@@ -1,19 +1,19 @@
 {
   "product": "mengyou-media-organizer",
   "product_name": "梦游｜媒体整理",
-  "version": "0.3.1",
-  "release_date": "2026-09-21",
+  "version": "0.3.2",
+  "release_date": "2026-09-28",
   "public_key_fingerprint": "5261889e734eed1d",
   "homepage": "https://mengyouriben.com/downloads/",
-  "notes": "修一个真实卡住的在线更新：0.2.1 点「检查更新」只得到 404。\n\n### 修复\n\n- **更新地址被用户设置永久盖住**。更新地址一旦写进 `%APPDATA%` 的设置里，就会盖住随程序\n  分发的那个。发布路线从站内路径换到 GitHub 之后，老安装全部指向一个已经下线的地址，\n  而唯一能修好它的办法恰恰是更新本身——死循环。两层一起修：\n  - `Settings` 加载时把已下线的地址迁回内置地址（`RETIRED_FEED_PREFIXES`）；\n  - `updater.check()` 在设置里的地址取不到时，**回落到程序内置的地址**再试一次。\n  回落不放宽任何安全条件：两个地址照样都要 HTTPS、产品标识一致、Ed25519 验签通过。\n- 发布脚本强制 UTF-8 输出。控制台是 GBK 时，打印 `✓` 会抛 `UnicodeEncodeError`，\n  而且正好炸在「制品已上传、回读已通过、指针还没切」的半路上。\n\n### 说明\n\n之前记录的「0.2.0 客户端发现 0.2.1」那次升级验证，走的是代码里内置的地址，\n**没有覆盖真实安装会读的用户设置**，所以没能发现这个问题。\n`tests/test_update_feed.py`（10 项）现在把两层都钉死了。",
+  "notes": "- 统一产品名称：看得到的地方一律叫「梦游｜媒体整理」，整理功能和你的设置、历史都不变。\n- 快捷方式改名：开始菜单和桌面的快捷方式从「梦游媒体整理」改成「梦游｜媒体整理」，覆盖升级时安装程序会删掉旧名的那一套，不会出现两个图标。\n- 版本号统一写成 v 开头：窗口标题是「梦游｜媒体整理 v0.3.2」，安装向导里也是 v0.3.2，左上角名称与正式名称一致。\n- 安装包改名为「梦游｜媒体整理 v0.3.2-setup.exe」（以前是「梦游媒体整理-<版本>-setup.exe」）。\n- 程序位置、程序文件名和 AppId 都不变，老版本点「在线更新」也能原地覆盖；设置、别名表、历史和日志不动。",
   "payload": {
     "type": "client_installer",
-    "url": "https://raw.githubusercontent.com/mengyouriben/mengyou-downloads/main/releases/mengyou-media-organizer/0.3.1/%E6%A2%A6%E6%B8%B8%E5%AA%92%E4%BD%93%E6%95%B4%E7%90%86-0.3.1-setup.exe",
-    "sha256": "3fb6925fc99afd9d6140056a27b75f8aa8338c736d26a6020b73c846cc003d98",
-    "size": 38208063
+    "url": "https://raw.githubusercontent.com/mengyouriben/mengyou-downloads/main/releases/mengyou-media-organizer/0.3.2/%E6%A2%A6%E6%B8%B8%EF%BD%9C%E5%AA%92%E4%BD%93%E6%95%B4%E7%90%86%20v0.3.2-setup.exe",
+    "sha256": "ba5553239601afa40a953ea93fc71c129ba36f822a1f090253d9a86cfd455830",
+    "size": 37402455
   },
   "signature": {
     "alg": "ed25519",
-    "value": "jlWmoaeevYEhvDICagh4OB9rDbB2Fxi3Mv0CS6pvGmyicBlwMI4AiVfEqlX/uP46tYtl1meuhtwZJGO3axN5Dw=="
+    "value": "kR7mQtFiZ3MuOgHDzZiBJf/qlAmOtdxa9PCMLeyQmK5esPGE0R2L2VGklIEa4Ak6l8ZOffwaW3S1/fwK8Mg7CQ=="
   }
 }

@@ -1,0 +1,19 @@
+{
+  "product": "cpu-cpu-cpu-50-70",
+  "product_name": "梦游｜电脑资源监视器",
+  "version": "0.2.0",
+  "release_date": "2026-09-28",
+  "public_key_fingerprint": "10b782c6b43aae26",
+  "homepage": "https://mengyouriben.com/downloads/",
+  "notes": "- 改名：软件、窗口标题、托盘提示和安装程序统一叫「梦游｜电脑资源监视器」，开始菜单和桌面各一个同名快捷方式。\n- 记录规则：CPU ≥ 50% 或内存 ≥ 70% 任一满足就静默记录（0.1.0 要求两者同时满足），详情里写明是哪一项触发。\n- 内存按物理内存计算，与任务管理器的“内存”一致。\n- 进程 CPU 用 1 秒实时计数器：打开窗口第一次就能看到真正在占 CPU 的程序（包括 Defender 这类受保护进程）。\n- 采样在后台线程运行，界面不卡，采样时不再闪出命令行窗口。\n- 只运行一个：关掉窗口后仍在托盘里监控，再点快捷方式会把窗口叫回来；MengyouCpuMemoryDiskWatcher.exe --quit 可让正在运行的实例正常退出。\n- 修复：第一次抓取时所有进程 CPU 都显示 0.0%；“Top 磁盘读写进程”只显示采样脚本自己的 powershell；采样命令卡住会让后台监控永久停止（现在单次最长 90 秒，超时提示后下个周期继续）。\n- 异常记录位置不变，升级不会动旧记录；没有触发标记的旧记录照常显示。",
+  "payload": {
+    "type": "client_installer",
+    "url": "https://raw.githubusercontent.com/mengyouriben/mengyou-downloads/main/releases/cpu-cpu-cpu-50-70/0.2.0/%E6%A2%A6%E6%B8%B8%EF%BD%9C%E7%94%B5%E8%84%91%E8%B5%84%E6%BA%90%E7%9B%91%E8%A7%86%E5%99%A8%20v0.2.0-setup.exe",
+    "sha256": "33a0fa2b8f87fc8c86091b416650577758943a73e3d0cfae631fc9d100eab04f",
+    "size": 33152644
+  },
+  "signature": {
+    "alg": "ed25519",
+    "value": "oxQW9xqNW6Ridm+QnISkUjKZBv700grCfB8pr+JXlnSPkoFAYaBR3ynKfT1aDyRNrAQ4xHDrZxVGMRx6pX2sDA=="
+  }
+}

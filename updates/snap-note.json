@@ -1,0 +1,19 @@
+{
+  "product": "snap-note",
+  "product_name": "梦游｜截图便签",
+  "version": "0.2.1",
+  "release_date": "2026-09-28",
+  "public_key_fingerprint": "af7e34a50dca949f",
+  "homepage": "https://mengyouriben.com/downloads/",
+  "notes": "- 默认保存目录改为当前用户的「图片\\梦游截图」，首次保存时自动创建；已设置过保存目录的用户不受影响。\n- 产品名统一为「梦游｜截图便签」：面板标题、窗口标题、托盘提示、设置窗口、提示对话框和文件属性都使用新名称，托盘提示与设置窗口标题显示 v0.2.1。\n- 新增当前用户安装器：无需管理员权限，开始菜单快捷方式和可选桌面快捷方式同名；以后升级原地覆盖，程序运行中会先提示关闭；卸载保留配置、最近记录、暂存图和已保存的截图。\n- 自适应收纳：离开面板后收成猫耳小图标，靠近屏幕左右边缘时收成短边条，悬停或点击即可展开。\n- 日期页：今天 / 昨天 / 前天 / 更早四个页签，按截图接收时的本机日期分类。\n- 新截图按接收时间命名为【截图YYYYMMDD-HHmm】.png，同名自动加 -01、-02 后缀，不覆盖已有文件；全屏时自动隐藏面板。",
+  "payload": {
+    "type": "client_installer",
+    "url": "https://raw.githubusercontent.com/mengyouriben/mengyou-downloads/main/releases/snap-note/0.2.1/%E6%A2%A6%E6%B8%B8%EF%BD%9C%E6%88%AA%E5%9B%BE%E4%BE%BF%E7%AD%BE%20v0.2.1-setup.exe",
+    "sha256": "27ca00bd16b63097f913fa1630dfa92ea0035dfa5232ee4b73a837322f4adf1b",
+    "size": 2209902
+  },
+  "signature": {
+    "alg": "ed25519",
+    "value": "A/P5lZeK+v0QriT0ueioQ8IA5GutHQ5ZL4Roa5GaCkJFdd3HSuxgsn1MdX+Nz+XRYDHRektWVpl9dxD9yfzQAw=="
+  }
+}

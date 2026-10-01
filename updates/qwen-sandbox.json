@@ -1,0 +1,19 @@
+{
+  "product": "qwen-sandbox",
+  "product_name": "梦游｜Qwen 本地聊天",
+  "version": "2.2.2",
+  "release_date": "2026-10-02",
+  "public_key_fingerprint": "f99d39a4fef77937",
+  "homepage": "https://mengyouriben.com/downloads/",
+  "notes": "- 修复会话不会自动保存的问题：此前界面写着“会话会自动保存”，实际只有点「保存会话」才会保存，点「新会话」或「关闭服务」都会丢掉当前对话。现在每次回答结束（包括中途停止）后都会自动保存到历史目录。\n- 页面顶部的提示改为显示实际的会话保存位置，不再固定写 H:\\ai模型会话历史记录。\n- 回答撞到长度上限时明确提示“已截断”；如果思考过程用完了全部长度、没有给出正文，会提示可以选择“关闭思考”后重发，不再显示一个空白回答。\n- 单次回答的长度上限：Qwen3.5-9B 由 2048 提高到 4096（实测开启思考时，一句简单问答就用掉了约 1960 个），Qwen3.8-27B 由 1536 提高到 4096（上下文窗口不变，16384；请求仍落在窗口约 80% 以内）。如果思考把长度用完、没有任何正文，程序自动关闭思考重试一次，并在回答下方注明发生了重试。\n\n发布前缺陷修复（同属 2.2.2，版本号不变）：\n\n- 会话历史默认目录不再写死作者电脑的 H: 盘，改为 %LOCALAPPDATA%\\QwenSandbox\\history（没有 LOCALAPPDATA 时为用户目录下的 QwenSandbox\\history），QWEN_SANDBOX_HISTORY_DIR 仍可覆盖。早期候选版的 H:\\ai模型会话历史记录 只有已经存在并含会话文件时才继续沿用，不会在任何电脑上创建。保存失败时页面顶部出现常驻的红色提示，写明原因和当前目录，直到下一次保存成功才消失（不再被每 2 秒刷新的状态文字盖掉）；“新会话”的确认语也显示真实目录。\n- 模型文件夹默认改为 %LOCALAPPDATA%\\QwenSandbox\\models；早期默认位置（D:\\AI\\models\\QwenSandbox、%LOCALAPPDATA%\\MengyouQwen\\models）只有已存在并含已登记的模型文件时才继续沿用，已安装用户的行为不变。构建前新增盘符常量扫描，launcher.py 里再出现写死的盘符路径会中止构建；构建结束时的路径残留扫描现在也检查 PyInstaller 压缩在 EXE 里的 Python 模块，并如实说明它的覆盖范围。\n- 本地接口加固：只接受 Host 为 127.0.0.1、localhost、[::1]（含本服务端口）且 Origin 为本服务自身的请求；所有改变状态的接口（包括没有请求体的“关闭服务”“停止”）要求每次启动随机生成的页面令牌，带请求体的 POST 必须是 application/json；不再回 Access-Control-Allow-Origin: null 等任何跨域放行头；设置里的模型文件夹和“浏览”起始目录拒绝网络共享（UNC）路径。\n- llama.cpp 引擎端口加随机 --api-key 并关闭自带网页界面（--no-webui），启动器对引擎的健康检查和聊天请求都带 Authorization；已用随包 llama-server --help 核对两个参数均受支持。\n- 干净电脑可能没有 VC++ 运行库：构建时按 native\\ 里 exe/dll 的导入表，把 msvcp140.dll、vcruntime140.dll、vcruntime140_1.dll 应用本地部署进安装包的 native\\，并检查导入的每个 *140.dll 都在随包目录里。\n- 新增第三方许可说明 THIRD_PARTY_NOTICES.txt（llama.cpp/ggml、cpp-httplib、nlohmann/json、LLVM OpenMP、NVIDIA CUDA 运行库、VC++ 运行库、Python、PyInstaller、模型来源与许可），随包安装、在安装向导信息页显示，界面底部有“第三方许可”链接。\n- 引擎在回答过程中退出不再被当成正常结束：界面提示“引擎在回答过程中中断了，这条回答不完整”，该回答在历史里标记为不完整；用户点“停止”不算中断。\n- 对话超出上下文不再卡死：发送前按保守估算（CJK 字符每个计 1 个 token，其他按 2.5 字符 1 个 token）裁掉最早的轮次，使请求落在上下文约 80% 以内，并给一条不入历史的提示；引擎仍返回超出上下文的 HTTP 400 时，界面显示“这段对话已经超过模型能记住的长度，请开新会话”，其他引擎错误也都转成中文，英文原文不再露出。\n- 界面提示和错误文字不再写进回答正文：截断、重试的提示单独显示，并作为消息的 notes 元数据随会话保存，仅用于回显；“略去了较早消息”的提示和各类错误文字只在当前页面显示，不入历史；它们都不会作为助手发言再发给模型。\n- 启动器被强行结束或崩溃时，引擎进程通过 Windows 作业对象（KILL_ON_JOB_CLOSE）随之结束，不再残留占着显存；启动时按 status.json 记录的引擎进程号清理上次遗留的 llama-server（只处理程序名确为 llama-server.exe 的进程）。\n- 首次下载失败的提示改为中文并给出下一步（检查网络或代理；也可以把已有的 .gguf 放进模型文件夹），断网、DNS、超时、证书、连接被中断分别说明，原始英文错误折叠在“详情”里；连接超时由 60 秒降到 15 秒；服务器限流（HTTP 429）按 Retry-After 或指数退避自动重试；写入模型文件失败（权限、磁盘已满）按本地文件问题提示，不再当作网络错误重试。\n- EXE 公司名与版权改为与安装包一致的“梦游日本”，构建时核对。\n- 安装向导改为简体中文（随项目提供 installer\\ChineseSimplified.isl；只做过 ISCC 编译验证，没有运行安装程序逐页核对）；installer.iss 增加编译期检查：暂存目录里缺少应用本地部署的 VC++ 运行库就拒绝出包。\n- 文案与发布材料补充：首次需联网访问 huggingface.co（国内常需代理）、安装包未签名时 SmartScreen 的处理步骤、安装约 1.2 GB（模型另计 5.3–17.7 GB）、默认开启思考首问可能较慢、关闭浏览器页面约 90 秒后程序自动退出、会话默认位置；“没有独立显卡也能运行”改为“未经验证”。",
+  "payload": {
+    "type": "client_installer",
+    "url": "https://download.mengyouriben.com/releases/qwen-sandbox/2.2.2/%E6%A2%A6%E6%B8%B8%EF%BD%9CQwen%20%E6%9C%AC%E5%9C%B0%E8%81%8A%E5%A4%A9-2.2.2-setup.exe",
+    "sha256": "ad2671f14278c6febb778e7abea72e71cf7182698fd003c3053d11e35bdc403e",
+    "size": 358863683
+  },
+  "signature": {
+    "alg": "ed25519",
+    "value": "FGhDqhoUl/7oOM6xxkO7fTuxwFcDc5g1KnIjkxtV6r/ZiZYWm1LQhniZVA8g2IGGRplkYx0Qj1v1XYbbO3GhAA=="
+  }
+}

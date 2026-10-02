@@ -1,0 +1,10 @@
+{
+  "app_key": "myvpn",
+  "version": "0.1.23",
+  "title": "网站账号、统一试用与在线更新",
+  "notes": "使用网站用户名登录，会员期限与网站一致；首次登录领取账号共用的一个月试用。取消软件激活码，联网确认使用权限，到期停止受限功能。每次启动后台检查可信更新，新增固定主页入口，统一蓝色主色和版本显示。",
+  "download_url": "https://download.mengyouriben.com/releases/tool/mengyou-myvpn-pc/0.1.23/myVPN-portable.zip",
+  "sha256": "6546395f4f58c61fc9d29c6b76fbb822234ee34455d84f2c070f49d6b99145be",
+  "key_id": "myvpn-manifest-ed25519-20260803",
+  "signature": "uNg1bWK921bJxjzOnBhM94D619M+rUMjMear0XaLnOhK4VGrnckEJkBeNU8Na4b9ToKb4UNWfxO625XeMRqPBQ=="
+}

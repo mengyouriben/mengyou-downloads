@@ -1,19 +1,19 @@
 {
   "product": "mengyou-media-organizer",
-  "product_name": "梦游｜媒体整理",
-  "version": "0.3.2",
-  "release_date": "2026-09-28",
+  "product_name": "梦游|媒体整理",
+  "version": "0.3.3",
+  "release_date": "2026-10-03",
   "public_key_fingerprint": "5261889e734eed1d",
-  "homepage": "https://mengyouriben.com/downloads/",
-  "notes": "- 统一产品名称：看得到的地方一律叫「梦游｜媒体整理」，整理功能和你的设置、历史都不变。\n- 快捷方式改名：开始菜单和桌面的快捷方式从「梦游媒体整理」改成「梦游｜媒体整理」，覆盖升级时安装程序会删掉旧名的那一套，不会出现两个图标。\n- 版本号统一写成 v 开头：窗口标题是「梦游｜媒体整理 v0.3.2」，安装向导里也是 v0.3.2，左上角名称与正式名称一致。\n- 安装包改名为「梦游｜媒体整理 v0.3.2-setup.exe」（以前是「梦游媒体整理-<版本>-setup.exe」）。\n- 程序位置、程序文件名和 AppId 都不变，老版本点「在线更新」也能原地覆盖；设置、别名表、历史和日志不动。",
+  "homepage": "https://mengyouriben.com/downloads/docs/",
+  "notes": "- 网站账号统一会员与首次月试用，服务器确认后可整理。\n- 每次启动签名更新提示，更新右侧固定主页。\n\n# 更新日志\n\n本文件是版本记录的唯一真源：程序里的「更新日志」页直接渲染它，在线更新的 release notes 也从它摘。\n每次发布必须在最上面新增一节，版本号与 `VERSION.txt`、`app/release_info.py` 保持一致。",
   "payload": {
     "type": "client_installer",
-    "url": "https://raw.githubusercontent.com/mengyouriben/mengyou-downloads/main/releases/mengyou-media-organizer/0.3.2/%E6%A2%A6%E6%B8%B8%EF%BD%9C%E5%AA%92%E4%BD%93%E6%95%B4%E7%90%86%20v0.3.2-setup.exe",
-    "sha256": "ba5553239601afa40a953ea93fc71c129ba36f822a1f090253d9a86cfd455830",
-    "size": 37402455
+    "url": "https://download.mengyouriben.com/releases/multimedia/mengyou-media-organizer-pc/0.3.3/%E6%A2%A6%E6%B8%B8%EF%BD%9C%E5%AA%92%E4%BD%93%E6%95%B4%E7%90%86%20v0.3.3-setup.exe",
+    "sha256": "67dc7b92274bf8cd0a927457df50f7eced882b9bb91246b707b37cadc6da8927",
+    "size": 38885228
   },
   "signature": {
     "alg": "ed25519",
-    "value": "kR7mQtFiZ3MuOgHDzZiBJf/qlAmOtdxa9PCMLeyQmK5esPGE0R2L2VGklIEa4Ak6l8ZOffwaW3S1/fwK8Mg7CQ=="
+    "value": "+Cd4GR/TBegz4jn5RzZxx3wmzbZjZjwQKJ7D1fUDLy2B51T+wEeiYeVYkK2Ahx1jlnq7KMKm8I3DRnP0SPxiDA=="
   }
 }

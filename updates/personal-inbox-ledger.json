@@ -1,19 +1,19 @@
 {
+  "schema_version": 1,
   "product": "personal-inbox-ledger",
-  "product_name": "梦游｜知要",
-  "version": "0.1.12",
-  "release_date": "2026-09-28",
+  "product_name": "梦游|知要",
+  "version": "0.1.14",
+  "release_date": "2026-10-02",
+  "notes": "接入网站用户名账号；服务器会员与首次一个自然月试用统一授权，取消激活码。\n启动后台检查本产品Ed25519签名更新，下载校验完整大小和SHA256后由用户确认安装；更新旁固定主页按钮。\n蓝色主题保持原布局和数据位置。旧版没有内置更新客户端，首次须手动安装本轮版本，之后每启动提示高版本。\n沿用知要原账号/云同步令牌、DPAPI本地库。短信导出Android伴侣独立保留0.1.12，无网络和独立账号；desktop版本0.1.14。\n\n修复公网更新下载User-Agent兼容性；先前已上传候选没有切latest或网站条目，本轮新版本目录不覆盖历史对象。\n",
   "public_key_fingerprint": "ee8c1aecb4dcc88f",
-  "homepage": "https://mengyouriben.com/downloads/",
-  "notes": "- 产品名统一为「梦游｜知要」：窗口标题、提示框、EXE 文件属性、来源接入指南和说明文档同步，版本显示为 v0.1.12。\n- 开始菜单和桌面各一个「梦游｜知要」快捷方式，应用身份不变。\n- 新增当前用户安装器：无需管理员权限，以后升级原地覆盖；卸载只删除程序文件和快捷方式，个人资料保留。\n- 个人资料位置不迁移、不改格式；功能与数据规则与 0.1.11 相同。\n- 知要短信 APK 版本同步为 0.1.12，功能不变。",
   "payload": {
     "type": "client_installer",
-    "url": "https://download.mengyouriben.com/releases/personal-inbox-ledger/0.1.12/%E6%A2%A6%E6%B8%B8%EF%BD%9C%E7%9F%A5%E8%A6%81%20v0.1.12-setup.exe",
-    "sha256": "74b6cf29411b8b5ae0cf3b05359cc07dd80d98da17181a3e831301d2df3afc43",
-    "size": 111286986
+    "url": "https://download.mengyouriben.com/releases/tool/personal-inbox-ledger-pc/0.1.14/%E6%A2%A6%E6%B8%B8%EF%BD%9C%E7%9F%A5%E8%A6%81%20v0.1.14-setup.exe",
+    "sha256": "01e512b0e8525c2b21a36bd9e6d86e27126968241939f90f07d94189d96a4f1e",
+    "size": 113830538
   },
   "signature": {
     "alg": "ed25519",
-    "value": "lhXbUUsw8lscdCzTa0u+4ONXG0pi1C6jsMwW7rKZZcj0yShQzq2M0RnKJLIzeNLDlEtFrhG3ig5Ja+ltip2rAQ=="
+    "value": "W9vxGbkU4Njg/0GwWSFr7IuMFia/1sIzr8f7LDF2efYAVlPuhE5OrY73K9kqosUpt4KXT3nHCvSyaAiDef2+Bg=="
   }
 }

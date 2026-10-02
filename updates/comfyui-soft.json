@@ -1,19 +1,19 @@
 {
+  "schema_version": 1,
   "product": "comfyui-soft",
-  "product_name": "梦游｜ComfyUI 助手",
-  "version": "4.24",
+  "product_name": "梦游|ComfyUI 助手",
+  "version": "4.26",
   "release_date": "2026-10-02",
+  "notes": "## 软件统一更新\n\n- 修复实际下载请求的产品标识，兼容公开分发服务器；验证签名与完整摘要后才安装。\n\n- 网站用户名登录，首次软件登录可按服务器权益领取一个月试用；会员到期后停止核心操作。\n- 取消激活码，令牌保存到 Windows 凭据管理器；本机配置不能授予使用时间。\n- 每次启动后台检查可信 Ed25519 清单，较高版本提示安装；校验 HTTPS、产品、大小和 SHA-256。\n- 在线更新旁固定主页入口，蓝色主色与正式名称、版本号统一。\n- 本软件旧版未内置更新检查，需首次手动安装本版；之后支持启动更新提醒。\n- 保留原 AppId、用户文件与任务/模型路径；不附带个人数据、模型文件或构建机路径。\n",
   "public_key_fingerprint": "c97e8945439d4956",
-  "homepage": "https://mengyouriben.com/downloads/",
-  "notes": "- 中文提示词可以直接用于文生图：SDXL/SD 底模（RealVisXL V5.0、SDXL-Turbo、SD-Turbo）的文本编码器只理解英文，此前「夜色中的大阪城，樱花飘落」会生成无关的粉色牡丹，而同一句英文能正确生成夜色中的大阪城。现在创作区「发送」的文生图、角色三视图、局部精修，以及命令行 `generate --cap t2i / character / refine / style`，会先在本机把含中文的分句翻译成英文再生成；纯英文分句（例如 `cinematic lighting, 85mm lens`）和 `(词:1.2)` 权重写法原样保留。视频功能（Wan 2.2 使用支持中文的 UMT5-XXL 文本编码器）不翻译。\n- 翻译模型：Helsinki-NLP 官方 Hugging Face 仓库 `Helsinki-NLP/opus-mt-zh-en`（MarianMT，赫尔辛基大学语言技术研究组 OPUS-MT，许可 CC-BY-4.0），固定版本 `cf109095479db38d6df799875e34039d4938aaa6`，7 个文件共 315,317,849 字节（300.71 MB），逐个校验 SHA-256，放在运行环境的 `ComfyUI\\models\\translators\\opus-mt-zh-en`（ComfyUI 不读取该文件夹）。该版本没有 `model.safetensors`，权重是 `pytorch_model.bin`，由运行环境自带的 transformers 以 `weights_only` 方式加载。\n- 翻译在一个常驻的辅助进程中完成：第一次需要时用运行环境自带的 `python_embeded\\python.exe` 启动（隐藏窗口、只用 CPU、不占出图显存、不联网、不写入运行环境），之后的提示词复用该进程；每次翻译有超时，出错时进程被结束、下次自动重启，关闭软件时进程随之退出。常见画面词（大阪城、故宫、汉服、半身像、赛博朋克、柴犬等）先按内置词表换成英文，避免小模型误译。\n- 创作区状态栏在发送时显示「正在翻译提示词…」，提交后显示「已翻译为：…」，鼠标悬停可看到实际发给模型的完整提示词。文生图的质量修饰词改为英文（`…, highly detailed, professional photography, cinematic lighting, 8k`），替换原来的中文模板。\n- 新安装：翻译组件属于基础下载，安装窗口单独列出（高配档合计由 8.25 GB 变为 8.55 GB）。已安装的运行环境（例如本机 `D:\\AI\\ComfyUI`）：本次运行中第一次发送中文提示词时弹出「下载中文提示词翻译组件」窗口，列出 7 个文件的位置、大小、来源、固定版本和完整 SHA-256；必须点击「下载翻译组件」才会下载，回车键对应「暂不下载」；下载使用与视频模型相同的下载器（断点续传、先检查磁盘空间、SHA-256 校验通过后才放入）。暂不下载或翻译失败时仍按原文生成，并提示「中文提示词未翻译，出图可能与描述不符；可下载翻译组件或改用英文」，提示旁的「下载翻译组件」可再次打开下载窗口。命令行 `setup-runtime --yes` 也会补齐缺少的翻译组件。\n- 发布前恶评审查后的修复（同属 4.24，版本号不变）：\n  - 安装包默认安装目录改为当前用户的程序文件夹 `%LOCALAPPDATA%\\Programs\\梦游｜ComfyUI 助手`，不再写死开发者的 `D:\\codex\\out\\Soft`（陌生人在目录页看到过开发者路径）；工作室本机的固定位置改由安装参数 `/DIR=` 传入，已按该目录安装过的电脑覆盖升级（含静默升级）仍沿用原目录（`UsePreviousAppDir=yes`）。安装向导由英文改为简体中文（`installer\\ChineseSimplified.isl`，译自 Inno Setup 6.5.0+ 的 `Default.isl`，只用 ISCC 编译验证，没有运行安装程序）。\n  - 每次生成使用新的随机采样种子：此前所有工作流的 KSampler 种子都是 0，同一提示词永远得到同一张图（重复「发送」还可能被 ComfyUI 的结果缓存直接应答、不产生新文件）。种子范围与 ComfyUI 前端一致（0 – 2^50−1）；`/api/generate?seed=N` 和命令行 `generate --seed N` 可固定种子；使用的种子随结果返回，状态栏显示「种子 N」，图片本身的 ComfyUI 元数据里也有。\n  - 提交之后的失败不再看不见、轮询不再永远转：新增 `/api/job?prompt_id=`（`app/job_status.py`）按任务编号向 ComfyUI 的 `/history` 和 `/queue` 查询，区分排队（含前面还有几个）、运行、完成、失败、超时、任务丢失和后端无响应。失败（显存或内存不足、模型文件缺失或损坏、节点报错、任务被中断、后端崩溃）用中文说明原因和处理办法，ComfyUI 的英文原文放在「详情」里；ComfyUI 因缓存直接应答而没有写新文件的任务也能判定完成；超过时限（图片 10 分钟、视频 30 分钟，常量 `IMAGE_JOB_TIMEOUT_SECONDS` / `VIDEO_JOB_TIMEOUT_SECONDS`）提示「生成超时，可能显存不足或模型异常」并停止轮询；本机服务连续无应答时页面也会停止。被 ComfyUI 拒绝的提交（HTTP 400：缺模型文件、缺参考图、缺节点）同样用中文解释，不再只显示「提交失败：HTTP Error 400」。首页和创作区都改用这套跟踪；Agent 抽屉的任务由桌面窗口提交，只能看输出目录，10 分钟没有结果就停止并说明；短剧成片最多等 30 分钟。\n  - 入口不再坏或悄悄变成文生图：创作栏「风格迁移」不再返回英文 `unknown tab 99`，对应风格 LoRA 工作流（需要自己放入 `InkWashpainting-sdxl_v1.safetensors`，缺少时按缺模型提示）；「故事脚本」打开本机 AI 编剧窗口（需要 Ollama）；「语音修饰」没有真实实现，选项置灰并标明「暂未开放」；页面的 `capToTab` 不再对未知功能默认返回文生图。桥接接口的所有用户可见错误改为中文（`此功能暂未开放`、`功能编号无效`、`缺少模板编号` 等）。Agent 抽屉里的「故事脚本」也改为打开该窗口。\n  - 「发布与分享」「素材库」「资产管理」「历史记录」（网页版 `/api/action?tab=10/11`）打开输出文件夹，不再把用户带进节点画布；首页输入框按 Enter 只发送，不再同时跳到画布；首页「选择模型」真正生效（只接受已安装的底模，默认选中软件当前使用的底模，不动它时行为与以前一致）。\n  - 局部精修和图生视频没有参考图时直接提示「请先添加参考图片」，不再提交一个不存在的 `canvas_t2i_00001_.png`；参考图只用于这一次发送，全局的「最后上传的图」已删除，不会再带到别的功能里（页面上附件也在发送后清空）；空提示词的角色三视图不再把单词 `default` 当作提示词。\n  - 后端没起来时界面不再卡约 4 秒：`server_running()` 先查 TCP 监听表（端口上没有监听就不再做 HTTP 探测，Windows 上每次拒绝连接要约 2 秒，两次探测合计约 4 秒），打开画布时的后端探测和画布语言设置移到后台线程。\n  - 新增 `THIRD_PARTY_NOTICES.txt`（随包、安装器「信息」页显示、窗口里「关于」可再次打开）：Qt 6 / PySide6（LGPL-3.0，动态链接及如何替换）、QtWebEngine / Chromium、Python（PSF）、OpenSSL、PyInstaller 等随包分发的软件，以及运行时使用但不随包分发的 ComfyUI（GPL-3.0）、RealVisXL、Wan、opus-mt-zh-en（CC BY 4.0 署名）等；PSF、LGPL-3.0、GPL-3.0 和 PyInstaller 的许可原文取自本机上游文件，没有编造版权人或年份。\n  - 网站说明和 README 去掉与实际不符的说法（「不会静默失败」「按需启动后端」），据实写明：打开软件就会启动本机 ComfyUI 后端并自动采用已有的 ComfyUI（例如 `D:\\AI\\ComfyUI`）；Agent、故事板和提示词优化需另装 Ollama 并拉取 qwen3:4b；Agent 和「加载到画布」仍送中文原文；安装包未签名及 SmartScreen 放行步骤；首次发中文需下载约 300 MB 翻译组件（国内常连不上 Hugging Face，可能需要代理）；选「暂不下载」后中文提示词按原文出图、效果差。\n- 不包含签名、上传或在线发布。",
   "payload": {
     "type": "client_installer",
-    "url": "https://download.mengyouriben.com/releases/comfyui-soft/4.24/%E6%A2%A6%E6%B8%B8%EF%BD%9CComfyUI%20%E5%8A%A9%E6%89%8B-4.24-setup.exe",
-    "sha256": "13b96dabafcd93d8aa302727c5e0ac143f12218ccd96ee43e9e2f7e7b98f3ee1",
-    "size": 128306360
+    "url": "https://download.mengyouriben.com/releases/multimedia/comfyui-soft-pc/4.26/%E6%A2%A6%E6%B8%B8%EF%BD%9CComfyUI%20%E5%8A%A9%E6%89%8B%20v4.26.exe",
+    "sha256": "07846964e5d4f909c4d0925fbdcff51bf495389905106d504352008860b40358",
+    "size": 132299211
   },
   "signature": {
     "alg": "ed25519",
-    "value": "U15/ANjgQWkr5La5GZAdY6sl/ctBsJMW2hf3uvxdCGiERRFHT101MfmGCTwwyurXzHAqxBWwD08c8YWyDAqnDA=="
+    "value": "Z7GQdZ4YkpLYuq9Z2whhV9Yyz1d0HT6YD+xuz6H/748W5/Zhc0qO+o+SJaWdVLoSAop+lvfYACWeqCZdLca+DA=="
   }
 }

@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
-  "product": "qwen-sandbox",
-  "product_name": "梦游|Qwen 本地聊天",
-  "version": "2.3.1",
+  "product": "mengyou-info-collector",
+  "product_name": "梦游|信息采集器",
+  "version": "0.16.1",
   "release_date": "2026-10-02",
   "notes": "## 软件统一更新\n\n- 修复实际下载请求的产品标识，兼容公开分发服务器；验证签名与完整摘要后才安装。\n\n- 网站用户名登录，首次软件登录可按服务器权益领取一个月试用；会员到期后停止核心操作。\n- 取消激活码，令牌保存到 Windows 凭据管理器；本机配置不能授予使用时间。\n- 每次启动后台检查可信 Ed25519 清单，较高版本提示安装；校验 HTTPS、产品、大小和 SHA-256。\n- 在线更新旁固定主页入口，蓝色主色与正式名称、版本号统一。\n- 本软件旧版未内置更新检查，需首次手动安装本版；之后支持启动更新提醒。\n- 保留原 AppId、用户文件与任务/模型路径；不附带个人数据、模型文件或构建机路径。\n",
-  "public_key_fingerprint": "f99d39a4fef77937",
+  "public_key_fingerprint": "a9f7ba62161a881d",
   "payload": {
     "type": "client_installer",
-    "url": "https://download.mengyouriben.com/releases/tool/qwen-sandbox-pc/2.3.1/%E6%A2%A6%E6%B8%B8%EF%BD%9CQwen%20%E6%9C%AC%E5%9C%B0%E8%81%8A%E5%A4%A9%20v2.3.1-setup.exe",
-    "sha256": "1cf9890dac36e65a52484a7e2d39a1fae97e9d4162c9afe52cdd6ba3a42e62cf",
-    "size": 361819201
+    "url": "https://download.mengyouriben.com/releases/tool/mengyou-info-collector-pc/0.16.1/%E6%A2%A6%E6%B8%B8%EF%BD%9C%E4%BF%A1%E6%81%AF%E9%87%87%E9%9B%86%E5%99%A8%20v0.16.1-setup.exe",
+    "sha256": "4cea80a4dd382f30de75dbdf7f421b3ac78bbdfdbbc93ecfefb28325f4f2ee81",
+    "size": 202888817
   },
   "signature": {
     "alg": "ed25519",
-    "value": "QnKPgDZwqGP/Ts4E4khqRZIlhBTvILQ8s3Hn7B/bytDZiE3xCp9MVIWUfV9hr6GTWblL8SzPRmhySS82LspTBw=="
+    "value": "dOH/h0KT4Ch6Fv8zvHC5gCUBp197RIXxSqt7sttCQKTS0/b2qhlJPlQk1epIjRhrbGKxixSEEcXxrpiU6UHmAg=="
   }
 }

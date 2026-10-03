@@ -1,19 +1,19 @@
 {
   "product": "mengyou-media-organizer",
   "product_name": "梦游|媒体整理",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "release_date": "2026-10-03",
   "public_key_fingerprint": "5261889e734eed1d",
   "homepage": "https://mengyouriben.com/downloads/docs/",
-  "notes": "- 网站账号统一会员与首次月试用，服务器确认后可整理。\n- 每次启动签名更新提示，更新右侧固定主页。\n\n# 更新日志\n\n本文件是版本记录的唯一真源：程序里的「更新日志」页直接渲染它，在线更新的 release notes 也从它摘。\n每次发布必须在最上面新增一节，版本号与 `VERSION.txt`、`app/release_info.py` 保持一致。",
+  "notes": "- 系统浏览器授权网站账号，桌面不输入用户名或密码。\n- 原设备绑定、安全令牌存储、会员和首次月试用、更新主页及数据路径保留；关闭或取消可终止登录。",
   "payload": {
     "type": "client_installer",
-    "url": "https://download.mengyouriben.com/releases/multimedia/mengyou-media-organizer-pc/0.3.3/%E6%A2%A6%E6%B8%B8%EF%BD%9C%E5%AA%92%E4%BD%93%E6%95%B4%E7%90%86%20v0.3.3-setup.exe",
-    "sha256": "67dc7b92274bf8cd0a927457df50f7eced882b9bb91246b707b37cadc6da8927",
-    "size": 38885228
+    "url": "https://download.mengyouriben.com/releases/multimedia/mengyou-media-organizer-pc/0.3.4/%E6%A2%A6%E6%B8%B8%EF%BD%9C%E5%AA%92%E4%BD%93%E6%95%B4%E7%90%86%20v0.3.4-setup.exe",
+    "sha256": "72b657cd964f0e2c09be17e61821882843a4f90a3d99b567d03162b660a2a61c",
+    "size": 37956931
   },
   "signature": {
     "alg": "ed25519",
-    "value": "+Cd4GR/TBegz4jn5RzZxx3wmzbZjZjwQKJ7D1fUDLy2B51T+wEeiYeVYkK2Ahx1jlnq7KMKm8I3DRnP0SPxiDA=="
+    "value": "o4OlORY735wzdxpV8LYKYlUjUqHDshjvpYJ9wvcrvQoNGKlWwRWqH1vp5eSgadvxt+898TnLXyk9zR5ahr8HAw=="
   }
 }

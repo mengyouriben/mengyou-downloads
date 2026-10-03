@@ -2,18 +2,18 @@
   "schema_version": 1,
   "product": "mengyou-info-collector",
   "product_name": "梦游|信息采集器",
-  "version": "0.16.2",
+  "version": "0.16.4",
   "release_date": "2026-10-03",
-  "notes": "# v0.16.2\n\n网站账号改用浏览器授权登录：已登录网站时点击授权即可，未登录时先在网站登录。软件不接收网站密码，可随时取消。保留网站会员与首次账号级一个自然月试用、设备绑定、原用户数据及可信在线更新。\n",
+  "notes": "# v0.16.4\n\n统一蓝白软件图标、窗口和安装器标识，改善账号区域对比度和窄窗口排列。移动端路线和真实构建边界见所属 MOBILE_READINESS 文档；本轮没有移动商店上线或本人验收记录。\n",
   "public_key_fingerprint": "a9f7ba62161a881d",
   "payload": {
     "type": "client_installer",
-    "url": "https://download.mengyouriben.com/releases/tool/mengyou-info-collector-pc/0.16.2/%E6%A2%A6%E6%B8%B8%EF%BD%9C%E4%BF%A1%E6%81%AF%E9%87%87%E9%9B%86%E5%99%A8%20v0.16.2-setup.exe",
-    "sha256": "7657bdf0185d47cdb9826a4da52f3c3ea0fcb926afbf270e0dd5e6a74c5745b6",
-    "size": 202882707
+    "url": "https://download.mengyouriben.com/releases/tool/mengyou-info-collector-pc/0.16.4/%E6%A2%A6%E6%B8%B8%EF%BD%9C%E4%BF%A1%E6%81%AF%E9%87%87%E9%9B%86%E5%99%A8%20v0.16.4-setup.exe",
+    "sha256": "73eb7bcfd79321344135f432450c7cc6d3f76e9c3f249a3125042e0e59db739c",
+    "size": 202759833
   },
   "signature": {
     "alg": "ed25519",
-    "value": "x3iNNvLWOFHajHja0zzMiFkOLLvFHoS0eJ1jzHChDVR12JR0SEdq99LNzX3hNOE6uSKfnaJOA+bGnxGmEH9RDg=="
+    "value": "TnpeOaJp2DKPm1VdIxHvgsszWFG1+Ke3PSjU5rg5wsfrmjMdxePvU6mfQV9Pi0dFhf1Qq2L7wmsfSDESNfSJDA=="
   }
 }

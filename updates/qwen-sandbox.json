@@ -2,18 +2,18 @@
   "schema_version": 1,
   "product": "qwen-sandbox",
   "product_name": "梦游|Qwen 本地聊天",
-  "version": "2.3.2",
+  "version": "2.3.4",
   "release_date": "2026-10-03",
-  "notes": "# v2.3.2\n\n网站账号改用浏览器授权登录：已登录网站时点击授权即可，未登录时先在网站登录。软件不接收网站密码，可随时取消。保留网站会员与首次账号级一个自然月试用、设备绑定、原用户数据及可信在线更新。\n",
+  "notes": "# v2.3.4\n\n统一蓝白软件图标、窗口和安装器标识，改善账号区域对比度和窄窗口排列。移动端路线和真实构建边界见所属 MOBILE_READINESS 文档；本轮没有移动商店上线或本人验收记录。\n",
   "public_key_fingerprint": "f99d39a4fef77937",
   "payload": {
     "type": "client_installer",
-    "url": "https://download.mengyouriben.com/releases/tool/qwen-sandbox-pc/2.3.2/%E6%A2%A6%E6%B8%B8%EF%BD%9CQwen%20%E6%9C%AC%E5%9C%B0%E8%81%8A%E5%A4%A9%20v2.3.2-setup.exe",
-    "sha256": "5dccb6f4f8f2a681c7b11d9f1b47d3e529e47e6bf522e1982688fad8275dac5d",
-    "size": 361840079
+    "url": "https://download.mengyouriben.com/releases/tool/qwen-sandbox-pc/2.3.4/%E6%A2%A6%E6%B8%B8%EF%BD%9CQwen%20%E6%9C%AC%E5%9C%B0%E8%81%8A%E5%A4%A9%20v2.3.4-setup.exe",
+    "sha256": "e5efaaf39f52a02dd6d631258fcda3899f4383f8440d4b630d7f7c429c4eeb7d",
+    "size": 362303801
   },
   "signature": {
     "alg": "ed25519",
-    "value": "rpekZSGtkfmTq6oMhLTEhhh9SqO0W+rlp4OpfxQ43+b5p2jhz7vGnErn4E+PaFpJ1tHEYL6XNqP019Rn1oAxBw=="
+    "value": "GuFP13bbodVBcvp1cC28CuJFKhGBdHRkN9JtsWbZkMa48Js2JvVxKYO4dmVm10XszDtVCQ207KUifRKa9mhICg=="
   }
 }

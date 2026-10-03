@@ -2,18 +2,18 @@
   "schema_version": 1,
   "product": "comfyui-soft",
   "product_name": "梦游|ComfyUI 助手",
-  "version": "4.27",
+  "version": "4.29",
   "release_date": "2026-10-03",
-  "notes": "# v4.27\n\n网站账号改用浏览器授权登录：已登录网站时点击授权即可，未登录时先在网站登录。软件不接收网站密码，可随时取消。保留网站会员与首次账号级一个自然月试用、设备绑定、原用户数据及可信在线更新。\n",
+  "notes": "# v4.29\n\n统一蓝白软件图标、窗口和安装器标识，改善账号区域对比度和窄窗口排列。移动端路线和真实构建边界见所属 MOBILE_READINESS 文档；本轮没有移动商店上线或本人验收记录。\n",
   "public_key_fingerprint": "c97e8945439d4956",
   "payload": {
     "type": "client_installer",
-    "url": "https://download.mengyouriben.com/releases/multimedia/comfyui-soft-pc/4.27/%E6%A2%A6%E6%B8%B8%EF%BD%9CComfyUI%20%E5%8A%A9%E6%89%8B%20v4.27.exe",
-    "sha256": "0cda34be7b96c9e549edd277194b73bcd6ec4e45d365420b19ccf0969da2a02f",
-    "size": 132240759
+    "url": "https://download.mengyouriben.com/releases/multimedia/comfyui-soft-pc/4.29/%E6%A2%A6%E6%B8%B8%EF%BD%9CComfyUI%20%E5%8A%A9%E6%89%8B%20v4.29.exe",
+    "sha256": "a12fea7001a68e4692f787660c4ecd4e7ac7366108e645ff3242e357dd224dba",
+    "size": 129899403
   },
   "signature": {
     "alg": "ed25519",
-    "value": "L8raM3vI1K6TUvPYdfKs+u1J1Rc51Suz1FyS0UidA595llLz8quoOTu0945DHSJSDcNfq2z80ukBKMPpuwTODA=="
+    "value": "t1ph26XGnY1gkGquhpPpmYUri+DdkouNyfJgOV9QSdfupUFc/fCdIPeiYNRizO+zvRvwhyejoPjzuV1i2zKBDg=="
   }
 }

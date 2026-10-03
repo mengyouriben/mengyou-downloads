@@ -1,19 +1,19 @@
 {
   "product": "mengyou-music-player",
   "product_name": "梦游|音乐播放器",
-  "version": "0.1.105",
+  "version": "0.1.106",
   "release_date": "2026-10-03",
   "public_key_fingerprint": "66b20971f02419b0",
   "homepage": "https://mengyouriben.com/downloads/docs/",
-  "notes": "- 用网站账号登录，在系统浏览器授权，桌面无需输入用户名和密码。",
+  "notes": "统一蓝色产品图标；账号和更新栏改善窄窗口布局与文字对比。",
   "payload": {
     "type": "client_installer",
-    "url": "https://download.mengyouriben.com/releases/multimedia/mengyou-music-player-pc/0.1.105/%E6%A2%A6%E6%B8%B8%EF%BD%9C%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%20v0.1.105-%E5%AE%89%E8%A3%85%E5%8C%85.exe",
-    "sha256": "a9ace56dc61620d02e681f4209f827dbd1679b42fdcbf8e814160dc6d0f85af5",
-    "size": 196863461
+    "url": "https://download.mengyouriben.com/releases/multimedia/mengyou-music-player-pc/0.1.106/%E6%A2%A6%E6%B8%B8%EF%BD%9C%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%20v0.1.106-%E5%AE%89%E8%A3%85%E5%8C%85.exe",
+    "sha256": "e8402d90acd4d460f798719f61d99e0c5b78a38589269c1104c186f15585fcfd",
+    "size": 194772491
   },
   "signature": {
     "alg": "ed25519",
-    "value": "c7IGVUnFb5Z6KHRGdTKoVXbOHfjSM0MtUYsBg6kaiKAivKep+b2WWtFL6YUeRsHUQh/p34gfrQps4TQb46DGAw=="
+    "value": "vhuXwOqAY7pGKgV2yDn6t5fgilEwWibwWxLzaYJGxJHKEQbgLn4jYZ9BWGXBk3Htl3hd7axGCdHqARF6JJRSCQ=="
   }
 }

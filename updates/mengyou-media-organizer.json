@@ -1,19 +1,19 @@
 {
   "product": "mengyou-media-organizer",
   "product_name": "梦游|媒体整理",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "release_date": "2026-10-03",
   "public_key_fingerprint": "5261889e734eed1d",
   "homepage": "https://mengyouriben.com/downloads/docs/",
-  "notes": "- 系统浏览器授权网站账号，桌面不输入用户名或密码。\n- 原设备绑定、安全令牌存储、会员和首次月试用、更新主页及数据路径保留；关闭或取消可终止登录。",
+  "notes": "- 统一蓝色产品图标，窗口、任务栏、安装包及快捷方式使用各产品独有符号；共享账号与更新栏改善排版、窄窗口换行和文字对比。",
   "payload": {
     "type": "client_installer",
-    "url": "https://download.mengyouriben.com/releases/multimedia/mengyou-media-organizer-pc/0.3.4/%E6%A2%A6%E6%B8%B8%EF%BD%9C%E5%AA%92%E4%BD%93%E6%95%B4%E7%90%86%20v0.3.4-setup.exe",
-    "sha256": "72b657cd964f0e2c09be17e61821882843a4f90a3d99b567d03162b660a2a61c",
-    "size": 37956931
+    "url": "https://download.mengyouriben.com/releases/multimedia/mengyou-media-organizer-pc/0.3.5/%E6%A2%A6%E6%B8%B8%EF%BD%9C%E5%AA%92%E4%BD%93%E6%95%B4%E7%90%86%20v0.3.5-setup.exe",
+    "sha256": "d0e5d99e9520b9f161ea9227436a6e8bf6ef3e1b1e7e3cbb7a241f5092ba1012",
+    "size": 35885294
   },
   "signature": {
     "alg": "ed25519",
-    "value": "o4OlORY735wzdxpV8LYKYlUjUqHDshjvpYJ9wvcrvQoNGKlWwRWqH1vp5eSgadvxt+898TnLXyk9zR5ahr8HAw=="
+    "value": "XSPEk+E8kIPKrNQdY0/IOAFPCiQzbrjTmEHTO/jxnIkqYO7tZS1PvpOVGSfZKkrp/lLzfCJ6ruJLylN2jd3DAA=="
   }
 }

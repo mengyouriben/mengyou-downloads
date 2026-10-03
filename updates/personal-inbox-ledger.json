@@ -2,18 +2,18 @@
   "schema_version": 1,
   "product": "personal-inbox-ledger",
   "product_name": "梦游|知要",
-  "version": "0.1.15",
+  "version": "0.1.16",
   "release_date": "2026-10-03",
-  "notes": "账号与同步改为“用网站账号登录”：在系统浏览器登录网站并授权，软件不接收网站密码；已登录网站时点击授权即可返回软件。\n会员、冻结与首次一个自然月试用仍由网站统一判定；授权可取消或重试。\n保留原云会话、资料库、同步开关、安装身份与签名更新；桌面0.1.15，离线Android短信导出伴侣仍为0.1.12。\n",
+  "notes": "# v0.1.16\n\n统一蓝白软件图标、窗口和安装器标识，改善账号区域对比度和窄窗口排列。移动端路线和真实构建边界见所属 MOBILE_READINESS 文档；本轮没有移动商店上线或本人验收记录。\n",
   "public_key_fingerprint": "ee8c1aecb4dcc88f",
   "payload": {
     "type": "client_installer",
-    "url": "https://download.mengyouriben.com/releases/tool/personal-inbox-ledger-pc/0.1.15/%E6%A2%A6%E6%B8%B8%EF%BD%9C%E7%9F%A5%E8%A6%81%20v0.1.15-setup.exe",
-    "sha256": "cdda31f1befe6cb3e126ad22db7780f5ad9022373440bbeba48aab9da377163e",
-    "size": 113843675
+    "url": "https://download.mengyouriben.com/releases/tool/personal-inbox-ledger-pc/0.1.16/%E6%A2%A6%E6%B8%B8%EF%BD%9C%E7%9F%A5%E8%A6%81%20v0.1.16-setup.exe",
+    "sha256": "597f95d6b0f51409e4246bc0678a9bc5b689174bf40cf06ffd2cecbd0c441fc2",
+    "size": 113899190
   },
   "signature": {
     "alg": "ed25519",
-    "value": "XypoZfcHs+hbLwOG2cbYZx+oqAdQnuAPsS3BZsdyv9dSW0ETLYLeN1ZU+C4JVIPSLOBuYTwxrFo3aFXABwnDCQ=="
+    "value": "Sca07TukHy8XTupxneBp3CbaCs3551HOB0ipZAMItLUsz9asAcxnrwsUnE+ZRZw8csUMg5nw0B1PYWriTfWFCw=="
   }
 }

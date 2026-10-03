@@ -2,18 +2,18 @@
   "schema_version": 1,
   "product": "snap-note",
   "product_name": "梦游|截图便签",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "release_date": "2026-10-03",
-  "notes": "改为“用网站账号登录”：在系统浏览器完成网站登录与授权，软件不再接收网站密码。已登录网站时点击授权即可返回软件。\n会员期限、账号冻结与首次一个自然月试用仍由网站统一判定；取消或超时可以重试。\n保持原安装身份、截图保存目录、配置、历史、安全令牌存储与受信签名更新；在线更新旁固定主页。\n",
+  "notes": "# v0.2.4\n\n统一蓝白软件图标、窗口和安装器标识，改善账号区域对比度和窄窗口排列。移动端路线和真实构建边界见所属 MOBILE_READINESS 文档；本轮没有移动商店上线或本人验收记录。\n",
   "public_key_fingerprint": "af7e34a50dca949f",
   "payload": {
     "type": "client_installer",
-    "url": "https://download.mengyouriben.com/releases/tool/snap-note-pc/0.2.3/%E6%A2%A6%E6%B8%B8%EF%BD%9C%E6%88%AA%E5%9B%BE%E4%BE%BF%E7%AD%BE%20v0.2.3-setup.exe",
-    "sha256": "476bd6df695a44510a128a8e39a89d1874398d2fe2621111a630c7853de3e812",
-    "size": 2405057
+    "url": "https://download.mengyouriben.com/releases/tool/snap-note-pc/0.2.4/%E6%A2%A6%E6%B8%B8%EF%BD%9C%E6%88%AA%E5%9B%BE%E4%BE%BF%E7%AD%BE%20v0.2.4-setup.exe",
+    "sha256": "d21af5cb9a8369cfabaa57d8701a860a6d26aa34a2d089760d45169a15bcc080",
+    "size": 2395817
   },
   "signature": {
     "alg": "ed25519",
-    "value": "gv2uV8OSMh7AoZs4Z7nuKNgrb8caXyDvi6sJLs5CqKB1i6qdOyUdHAR8ZAfjmLr2Yq5mhRi8Alb9R2/p5cSbBg=="
+    "value": "mQvEXq6EI9job+yF21JaMMSOiIfZ+f52IaBstL0evWDJoLXvlE2HfjWEAnKxB9meTg54vTC3Tt0vt0rlqwtsBw=="
   }
 }

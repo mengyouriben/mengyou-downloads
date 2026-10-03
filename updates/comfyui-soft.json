@@ -2,18 +2,18 @@
   "schema_version": 1,
   "product": "comfyui-soft",
   "product_name": "梦游|ComfyUI 助手",
-  "version": "4.26",
-  "release_date": "2026-10-02",
-  "notes": "## 软件统一更新\n\n- 修复实际下载请求的产品标识，兼容公开分发服务器；验证签名与完整摘要后才安装。\n\n- 网站用户名登录，首次软件登录可按服务器权益领取一个月试用；会员到期后停止核心操作。\n- 取消激活码，令牌保存到 Windows 凭据管理器；本机配置不能授予使用时间。\n- 每次启动后台检查可信 Ed25519 清单，较高版本提示安装；校验 HTTPS、产品、大小和 SHA-256。\n- 在线更新旁固定主页入口，蓝色主色与正式名称、版本号统一。\n- 本软件旧版未内置更新检查，需首次手动安装本版；之后支持启动更新提醒。\n- 保留原 AppId、用户文件与任务/模型路径；不附带个人数据、模型文件或构建机路径。\n",
+  "version": "4.27",
+  "release_date": "2026-10-03",
+  "notes": "# v4.27\n\n网站账号改用浏览器授权登录：已登录网站时点击授权即可，未登录时先在网站登录。软件不接收网站密码，可随时取消。保留网站会员与首次账号级一个自然月试用、设备绑定、原用户数据及可信在线更新。\n",
   "public_key_fingerprint": "c97e8945439d4956",
   "payload": {
     "type": "client_installer",
-    "url": "https://download.mengyouriben.com/releases/multimedia/comfyui-soft-pc/4.26/%E6%A2%A6%E6%B8%B8%EF%BD%9CComfyUI%20%E5%8A%A9%E6%89%8B%20v4.26.exe",
-    "sha256": "07846964e5d4f909c4d0925fbdcff51bf495389905106d504352008860b40358",
-    "size": 132299211
+    "url": "https://download.mengyouriben.com/releases/multimedia/comfyui-soft-pc/4.27/%E6%A2%A6%E6%B8%B8%EF%BD%9CComfyUI%20%E5%8A%A9%E6%89%8B%20v4.27.exe",
+    "sha256": "0cda34be7b96c9e549edd277194b73bcd6ec4e45d365420b19ccf0969da2a02f",
+    "size": 132240759
   },
   "signature": {
     "alg": "ed25519",
-    "value": "Z7GQdZ4YkpLYuq9Z2whhV9Yyz1d0HT6YD+xuz6H/748W5/Zhc0qO+o+SJaWdVLoSAop+lvfYACWeqCZdLca+DA=="
+    "value": "L8raM3vI1K6TUvPYdfKs+u1J1Rc51Suz1FyS0UidA595llLz8quoOTu0945DHSJSDcNfq2z80ukBKMPpuwTODA=="
   }
 }

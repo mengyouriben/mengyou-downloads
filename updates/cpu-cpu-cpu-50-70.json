@@ -2,18 +2,18 @@
   "schema_version": 1,
   "product": "cpu-cpu-cpu-50-70",
   "product_name": "梦游|电脑资源监视器",
-  "version": "0.5.1",
-  "release_date": "2026-10-02",
-  "notes": "## 软件统一更新\n\n- 修复实际下载请求的产品标识，兼容公开分发服务器；验证签名与完整摘要后才安装。\n\n- 网站用户名登录，首次软件登录可按服务器权益领取一个月试用；会员到期后停止核心操作。\n- 取消激活码，令牌保存到 Windows 凭据管理器；本机配置不能授予使用时间。\n- 每次启动后台检查可信 Ed25519 清单，较高版本提示安装；校验 HTTPS、产品、大小和 SHA-256。\n- 在线更新旁固定主页入口，蓝色主色与正式名称、版本号统一。\n- 本软件旧版未内置更新检查，需首次手动安装本版；之后支持启动更新提醒。\n- 保留原 AppId、用户文件与任务/模型路径；不附带个人数据、模型文件或构建机路径。\n",
+  "version": "0.5.2",
+  "release_date": "2026-10-03",
+  "notes": "# v0.5.2\n\n网站账号改用浏览器授权登录：已登录网站时点击授权即可，未登录时先在网站登录。软件不接收网站密码，可随时取消。保留网站会员与首次账号级一个自然月试用、设备绑定、原用户数据及可信在线更新。\n",
   "public_key_fingerprint": "10b782c6b43aae26",
   "payload": {
     "type": "client_installer",
-    "url": "https://download.mengyouriben.com/releases/tool/cpu-cpu-cpu-50-70-pc/0.5.1/%E6%A2%A6%E6%B8%B8%EF%BD%9C%E7%94%B5%E8%84%91%E8%B5%84%E6%BA%90%E7%9B%91%E8%A7%86%E5%99%A8%20v0.5.1-setup.exe",
-    "sha256": "b23811281d196c3619e2315923ee97cf1478f25928a9f2e8519b0698a49e20f2",
-    "size": 26920494
+    "url": "https://download.mengyouriben.com/releases/tool/cpu-cpu-cpu-50-70-pc/0.5.2/%E6%A2%A6%E6%B8%B8%EF%BD%9C%E7%94%B5%E8%84%91%E8%B5%84%E6%BA%90%E7%9B%91%E8%A7%86%E5%99%A8%20v0.5.2-setup.exe",
+    "sha256": "c32488d5a70d153574e96937ee2144527e5e683b1453351205c76db16142daa0",
+    "size": 27026447
   },
   "signature": {
     "alg": "ed25519",
-    "value": "aY2Iuer2F6vfNQHiD8anm66W29doZQC5/yJXDVCRBKv1aA3obCeo32XAzNb6ibAA9rbADmqO+m07J4vg25CGCA=="
+    "value": "ekhgonry6kPV2HR1/FLgfRikWwDa77wV08nlu+9/BjrPoGRQ/ZqUJGudTQZW0WrXVBVKnj0BANg9R9glbCLTBA=="
   }
 }
